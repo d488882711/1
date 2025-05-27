@@ -1,0 +1,84 @@
+
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+bind-address: "*"
+ipv6: false
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7894
+  fallback-filter:
+    geoip: false
+    ipcidr:
+    - 240.0.0.0/4
+  nameserver:
+    - https://puredns.org/dns-query
+    - tls://puredns.org:853
+  fallback:
+    - tcp://108.137.44.39
+    - tcp://108.137.44.9
+    - 108.137.44.39
+    - 108.137.44.9
+tun:
+  enable: true
+  stack: system 
+  macOS-auto-route: true
+  macOS-auto-detect-interface: true
+  dns-hijack:
+    - tcp://108.137.44.39:53
+experimental:
+  interface-name: en0
+
+proxies:
+  - {name: 🔒 VM-TCP-NA 🇨🇭 CH-186.190.215.193:22324, server: 186.190.215.193, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, sni: , alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: tcp, ws-opts: {path: , headers: {Host: }}}
+  - {name: 4FreeIran-12914, server: 2.56.126.103, port: 33579, type: vmess, uuid: 2eb3ee2a-7bf8-4b50-9b93-2d489d2f3456, sni: , alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: tcp, ws-opts: {path: /, headers: {Host: }}}
+  - {name: 🔒 VM-TCP-NA 🇨🇾 CY-45.12.138.47:22839, server: 45.12.138.47, port: 22839, type: vmess, uuid: 2858a404-d0ca-4d67-80a6-ce8e95e383ff, sni: , alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: tcp, ws-opts: {path: , headers: {Host: }}}
+  - {name: 4FreeIran-13409, server: 45.8.145.145, port: 30520, type: vmess, uuid: 3038024f-3a34-4228-b61c-d741b2fbec8f, sni: , alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: tcp, ws-opts: {path: /, headers: {Host: }}}
+  - {name: 🔒 VM-TCP-NA 🇨🇭 CH-23.166.88.183:22324, server: 23.166.88.183, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, sni: , alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: tcp, ws-opts: {path: , headers: {Host: }}}
+  - {name: 4FreeIran-15364, server: 95.164.38.6, port: 21938, type: vmess, uuid: 583bebef-3e0b-4c85-ba80-39e07ce35ad9, sni: , alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: tcp, ws-opts: {path: , headers: {Host: }}}
+  - {name: 4FreeIran-14323, server: 2.56.126.103, port: 33579, type: vmess, uuid: 2eb3ee2a-7bf8-4b50-9b93-2d489d2f3456, sni: , alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: tcp, ws-opts: {path: , headers: {Host: }}}
+  - {name: 4FreeIran-13345, server: 45.12.133.43, port: 28444, type: vmess, uuid: 1be8eddb-4f8c-45d0-b2a1-e538eb3abd39, sni: , alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: tcp, ws-opts: {path: /, headers: {Host: }}}
+  - {name: 🔒 VM-TCP-NA 🇨🇦 CA-91.194.11.162:58891, server: 91.194.11.162, port: 58891, type: vmess, uuid: 4439cf3e-d072-4a5b-88b2-2a2ec6d71340, sni: , alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: tcp, ws-opts: {path: , headers: {Host: }}}
+  - {name: 4FreeIran-15336, server: 91.194.11.178, port: 28984, type: vmess, uuid: 9b2335af-f24c-4810-9c34-95568ebd579d, sni: , alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: tcp, ws-opts: {path: , headers: {Host: }}}
+  - {name: 🔒 VM-TCP-NA 🇮🇳 IN-45.79.121.243:10002, server: 45.79.121.243, port: 10002, type: vmess, uuid: 3699fa73-ac5c-41ca-8d6e-fe4cb70c7e02, sni: , alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: tcp, ws-opts: {path: , headers: {Host: }}}
+  - {name: 4Mohsen-12794, server: 94.136.184.155, port: 39253, type: vmess, uuid: 69b49a35-cf55-4d14-9f2b-d7ce3a0db72e, sni: , alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: tcp, ws-opts: {path: , headers: {Host: }}}
+  - {name: 🔒 VM-TCP-NONE 🇮🇳 IN-94.136.184.156:38872, server: 94.136.184.156, port: 38872, type: vmess, uuid: 220732cc-9e43-4453-83f1-c9435be25b5b, sni: , alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: tcp, ws-opts: {path: , headers: {Host: }}}
+  - {name: 4FreeIran-14893, server: 46.250.237.196, port: 29999, type: vmess, uuid: b31fc134-978e-4176-8579-8107d6a0cede, sni: , alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: tcp, ws-opts: {path: , headers: {Host: }}}
+  - {name: 4FreeIran-13300, server: 15.204.86.120, port: 35696, type: vmess, uuid: cad0504a-a9dc-4d29-8844-b11b69f14a8d, sni: , alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: tcp, ws-opts: {path: , headers: {Host: }}}
+  - {name: 4FreeIran-15029, server: 51.81.203.57, port: 28860, type: vmess, uuid: 1784497d-03a1-40bb-bb8b-de4ffac7c59c, sni: , alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: tcp, ws-opts: {path: , headers: {Host: }}}
+  - {name: 4FreeIran-15365, server: 95.164.4.140, port: 52937, type: vmess, uuid: 71820e62-7b99-4ed9-a836-1e0f814c33a1, sni: , alterId: 0, cipher: auto, tls: , skip-cert-verify: true, udp: true, network: tcp, ws-opts: {path: , headers: {Host: }}}
+
+proxy-groups:
+  - name: sshkit-generator
+    type: load-balance
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+    strategy: consistent-hashing
+    proxies:
+      - 🔒 VM-TCP-NA 🇨🇭 CH-186.190.215.193:22324
+      - 4FreeIran-12914
+      - 🔒 VM-TCP-NA 🇨🇾 CY-45.12.138.47:22839
+      - 4FreeIran-13409
+      - 🔒 VM-TCP-NA 🇨🇭 CH-23.166.88.183:22324
+      - 4FreeIran-15364
+      - 4FreeIran-14323
+      - 4FreeIran-13345
+      - 🔒 VM-TCP-NA 🇨🇦 CA-91.194.11.162:58891
+      - 4FreeIran-15336
+      - 🔒 VM-TCP-NA 🇮🇳 IN-45.79.121.243:10002
+      - 4Mohsen-12794
+      - 🔒 VM-TCP-NONE 🇮🇳 IN-94.136.184.156:38872
+      - 4FreeIran-14893
+      - 4FreeIran-13300
+      - 4FreeIran-15029
+      - 4FreeIran-15365
+
+rules:
+ - MATCH,sshkit-generator
